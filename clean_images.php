@@ -1,9 +1,9 @@
 <?php
 
 // config
-$basedir="/pool/images/camsev1";
-$monthdir="Img_2015-08";
-$sunmoon_file="sunmoon.csv";
+$basedir='/pool/images/camsev1';
+$monthdir='Img_2015-08';
+$sunmoon_file='sunmoon.csv';
 
 // functions
 function read_sun_rise_set($file,$date) {
@@ -11,7 +11,7 @@ function read_sun_rise_set($file,$date) {
     $csv['SAofficial']=6;
     $csv['SUofficial']=7;
 
-    $f = fopen("sunmoon.csv", "r");
+    $f = fopen($file, "r");
     $result = false;
     while ($row = fgetcsv($f,0,";")) {
         if ($row[0] == $date) {

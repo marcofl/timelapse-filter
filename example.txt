@@ -1,2 +1,0 @@
-php clean_images.php | ./read.sh | ffmpeg -f image2pipe -r 25 -vcodec mjpeg -probesize 10M -i - -r 25 -q:v 2 -pix_fmt yuv420p -s hd480 /var/www/html/video/timelapse-2015-07_1.mp4
-

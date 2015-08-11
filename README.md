@@ -1,5 +1,6 @@
 # timelapse-filter
 * php script hack for filtering jpeg photos for timelapse videos
+* currently just filters for sunrise / sunset
 * hardly depends on how photo files are named!
 
 ## example

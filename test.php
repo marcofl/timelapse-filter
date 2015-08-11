@@ -1,10 +1,5 @@
 <?php
 
-// config
-$basedir="/pool/images/camsev1";
-$monthdir="Img_2015-08";
-
-// functions
 function read_sun_rise_set($file,$date) {
     $csv['Datum']=0;
     $csv['SAofficial']=6;
@@ -22,21 +17,7 @@ function read_sun_rise_set($file,$date) {
         }
     }
     fclose($f);
-}
-
-$files = scandir($basedir."/".$monthdir);
-
-//print_r($files);
-
-foreach ($files as $file) {
-  echo $file." Date: ";
-  // extract date part from filename
-  $file_date=explode("_",$file);
-  $date=date('j.n.Y', strtotime(explode("-",$file_date[1])[0]));
-  $time=date('H:i', strtotime(explode("-",$file_date[1])[1]));
     
-  echo $date." Time: ".$time."\n";
+    
 }
-
-
-?>
+    echo date('d-m-Y H:i', strtotime("20150801-2059"));
